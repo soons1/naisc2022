@@ -3,23 +3,30 @@ import matplotlib.pyplot as plt
 import os
 import csv
 
+#Set working directory
 os.chdir(r"C:\Users\User\Desktop\Ai Sg")
 
+# Using csv module to read csv file
 with open("sentiment.csv", "r") as file:
     csvreader = csv.reader(file)
     header = next(csvreader)
     print(header)
-
+    
+# Use pandas to red csv
 df = pd.read_csv("sentiment.csv")
+
+# Extract the data for barchart
 df = df.rename(columns=df.iloc[0])
 y_values = df.iloc[0]
 
+# Plot barchart
 ax = y_values.plot.bar()
+# Add x-axis labels
 ax.set_xticklabels(header, rotation = 0)
-
+# Add barchart labels
 for i, v in enumerate(df.iloc[0]):
     ax.annotate(str(v), (i, v), xytext=(0, 10), textcoords='offset points', ha='center', verticalalignment='top')
-
+# Add title
 plt.title("Distribution of satisfaction levels")
 plt.show()
 
