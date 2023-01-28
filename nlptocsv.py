@@ -59,6 +59,7 @@ neutral = 0
 negative = 0
 positive = 0
 
+# Counting the number of -1/0/1
 for dict in list_output:
     labels_lst = dict["labels"]
     for num in labels_lst:
@@ -68,10 +69,12 @@ for dict in list_output:
             negative += 1
         else:
             positive += 1
-
+            
+# Set the header for the csv file
 header = ["Negative", "Neutral", "Positive"]
 data = [negative, neutral, positive]
 
+# Writing the csv file
 with open('sentiment2.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(header)
