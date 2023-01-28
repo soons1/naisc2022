@@ -1,0 +1,8 @@
+pip install -U textblob
+python -m textblob.download_corpora
+pip install -U spacy
+python -m spacy download en_core_web_sm
+pip install --user -U nltk
+nltk.download('brown')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
