@@ -34,26 +34,29 @@
 # output = postprocess(raw_output)
 # print(output)
 
+# [{ "sentence": ['To', 'sum', 'it', 'up', ':', 'service', 'varies', 'from', 'good', 'to', 'mediorce', ',',
+#             'depending', 'on', 'which', 'waiter', 'you', 'get', ';', 'generally', 'it', 'is', 'just',
+#             'average', 'ok', '.'],
+#             'aspects': [[5]],
+#             'labels': [0]},
+
+#             {'sentence': ['Everything', 'is', 'always', 'cooked', 'to', 'perfection', ',', 'the', 'service',
+#             'is', 'excellent,', 'the', 'decor', 'cool', 'and', 'understated.'],
+#             'aspects': [[8], [12]],
+#             'labels': [1, 1]},
+
+#             {'sentence': ['the', 'only', 'chicken', 'i', 'moderately', 'enjoyed', 'was', 'their', 'grilled',
+#             'chicken', 'special', 'with', 'edamame', 'puree', '.'],
+#             'aspects': [[8, 9], [2], [9]],
+#             'labels': [1, 1, 1]}]
+
 # Output from sgnlp is list of dictionaries
 import csv
 import os
+import senticGCNBERT
 os.chdir(r'C:\Users\User\Desktop')
 
-list_output =[{ "sentence": ['To', 'sum', 'it', 'up', ':', 'service', 'varies', 'from', 'good', 'to', 'mediorce', ',',
-            'depending', 'on', 'which', 'waiter', 'you', 'get', ';', 'generally', 'it', 'is', 'just',
-            'average', 'ok', '.'],
-            'aspects': [[5]],
-            'labels': [0]},
-
-            {'sentence': ['Everything', 'is', 'always', 'cooked', 'to', 'perfection', ',', 'the', 'service',
-            'is', 'excellent,', 'the', 'decor', 'cool', 'and', 'understated.'],
-            'aspects': [[8], [12]],
-            'labels': [1, 1]},
-
-            {'sentence': ['the', 'only', 'chicken', 'i', 'moderately', 'enjoyed', 'was', 'their', 'grilled',
-            'chicken', 'special', 'with', 'edamame', 'puree', '.'],
-            'aspects': [[8, 9], [2], [9]],
-            'labels': [1, 1, 1]}]
+list_output = senticGCNBERT.output
 
 neutral = 0
 negative = 0
