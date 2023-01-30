@@ -82,10 +82,7 @@ with open('sentiment2.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(header)
     writer.writerow(data)
-    writer.writerow(["1234", "3473", "9083"])
-    writer.writerow(["3434", "r3093", "d32d[]ld"])
-
-
+    
 print(positive)
 print(negative)
 print(neutral)
