@@ -13,7 +13,7 @@ app = dash.Dash(__name__)
 app.title = "Sentiment Analysis Dashboard"
 
 #Read data from CSV file
-df = pd.read_csv("newsentiment.csv")
+df = pd.read_csv("scraped_data.csv")
 
 #Formatting data
 format = pd.melt(df, value_vars=["Negative", "Neutral", "Positive"], value_name="Count", var_name="Sentiment")
