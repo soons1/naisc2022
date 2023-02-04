@@ -55,7 +55,6 @@ if 'data' in data:
 else:
     print("No tweets found.")
 
-return nlpmodelinputs
 
 
 
