@@ -8,7 +8,7 @@ from sgnlp.models.sentic_gcn import(
     SenticGCNBertPostprocessor
 )
 
-import main
+import scrape
 
 tokenizer = SenticGCNBertTokenizer.from_pretrained("bert-base-uncased")
 
