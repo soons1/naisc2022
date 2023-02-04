@@ -40,7 +40,7 @@ data = json.loads(response.text)
 
 
 
-inputs = []
+nlpmodelinputs = []
 
 if 'data' in data:
     for tweet in data['data']:
@@ -51,11 +51,11 @@ if 'data' in data:
         dic = {}
         dic['sentence'] = tweet_text
         dic['aspects'] = lst
-        inputs.append(dic)
+        nlpmodelinputs.append(dic)
 else:
     print("No tweets found.")
 
-return inputs
+return nlpmodelinputs
 
 
 
