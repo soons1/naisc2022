@@ -55,7 +55,7 @@ if 'data' in data:
 else:
     print("No tweets found.")
 
-print(inputs)
+return inputs
 
 
 
