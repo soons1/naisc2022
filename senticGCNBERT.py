@@ -34,7 +34,7 @@ preprocessor = SenticGCNBertPreprocessor(
 
 postprocessor = SenticGCNBertPostprocessor()
 
-processed_inputs, processed_indices = preprocessor(main.inputs)
+processed_inputs, processed_indices = preprocessor(scrape.nlpmodelinputs)
 raw_outputs = model(processed_indices)
 
-post_outputs = postprocessor(processed_inputs=processed_inputs, model_outputs=raw_outputs)
+nlpmodeloutputs = postprocessor(processed_inputs=processed_inputs, model_outputs=raw_outputs)
