@@ -9,3 +9,6 @@ senticgcnbert.py employs sgnlp's aspect-based sentiment analysis model to label 
 
 nlpoutputtocsv.py converts the output from the sgnlp to a csv file which is processed to produce the dashboard.
 
+dashboard.py takes the csv file as input and generates our final product - a comprehensive dashboard for businesses to make sense of consumer sentiment
+
+requirements.txt contains the modules required to run the data scraping process
